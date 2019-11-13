@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- 제작된 스크립트 -->
+<script src="/blue-mable/scripts/jquery-3.4.1.min.js"></script>
+<script src="/blue-mable/scripts/board.js"></script>
+<script src="/blue-mable/scripts/landcard.js"></script>
+<link rel="stylesheet" type="text/css" href="/blue-mable/style/board.css">
+</head>
+<body class="container">
+<h1 class="txtcen">부루마블</h1>
+<div class="row">
+	<div class="col-sm-2">
+		<input type="image" class="dice" readonly="readonly" id="dice1" src="/blue-mable/image/dice1.PNG">
+		<input type="image" class="dice" readonly="readonly" id="dice2" src="/blue-mable/image/dice1.PNG">
+		<button type="button" id="play">다이스</button>
+	</div>
+	<div class="col-sm-9">
+		<table id=board>
+
+		</table>
+	</div>
+	<div class="col-sm-1" id="player">
+		
+	</div>
+</div>
+</body>
+<script src="/blue-mable/scripts/diceBtn.js"></script>
+<script src="/blue-mable/scripts/nextPlayer.js"></script>
+<script src="/blue-mable/scripts/moving.js"></script>
+<script src="/blue-mable/scripts/nomalLandBuy.js"></script>
+<script src="/blue-mable/scripts/touristBuy.js"></script>
+<script>
+$(document).ready(function() {
+	
+	$("#p1").append("<span class='holse' id='1p' >🚲</span>");
+	$("#p1").append("<span class='holse' id='2p' >🚗</span>");
+	$("#p1").append("<span class='holse' id='3p' >🏎</span>");
+	$("#p1").append("<span class='holse' id='4p' >🏍</span>");
+	
+	$(".info").hide();
+	
+	$(".player").each(function(){
+		$(this).val(currentPlayer.money);
+	});
+	
+	
+	$(".buy").click(function(){
+		let landId = $(this).attr("id")
+		//console.log(landId);
+		
+		//console.log(currentPlayer.destination)
+		$(LandCard).each(function(index,item){
+			if(currentPlayer.destination == item.no) {
+				if(item.type == 1){
+					//console.log("type: ", item.type)
+					nomalLandBuy(currentPlayer, landId)
+				}
+				else if(item.type == 2){
+					//console.log("type: ", item.type)
+					touristBuy(currentPlayer, landId)
+				}
+				else {
+					//console.log("type: ", item.type);
+					return false;
+				}
+			}
+		})
+		$("#player"+(currentPlayer.playerNo)).val(currentPlayer.money);
+	})
+}) // document ready 닫는 괄호
+</script>
+
+</html>

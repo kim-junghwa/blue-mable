@@ -1,0 +1,57 @@
+[
+ {
+   "LandNo": "1",
+   "LandName": "출발",
+   "action": "은행에서 월급 20만원 받기"
+ },
+ {
+   "LandNo": "3",
+   "LandName": "황금열쇠",
+   "action": "황금열쇠 뽑기"
+ },
+ {
+   "LandNo": "8",
+   "LandName": "황금열쇠",
+   "action": "황금열쇠 뽑기"
+ },
+ {
+   "LandNo": "11",
+   "LandName": "무인도",
+   "action": "3턴 동안 이동 불가, 주사위 더블일 경우 탈출"
+ },
+ {
+   "LandNo": "13",
+   "LandName": "황금열쇠",
+   "action": "황금열쇠 뽑기"
+ },
+ {
+   "LandNo": "18",
+   "LandName": "황금열쇠",
+   "action": "황금열쇠 뽑기"
+ },
+ {
+   "LandNo": "21",
+   "LandName": "사회복지기금 회수",
+   "action": "누적된 사회복지기금 회수"
+ },
+ {
+   "LandNo": "23",
+   "LandName": "황금열쇠",
+   "action": "황금열쇠 뽑기"
+ },
+ {
+   "LandNo": "31",
+   "LandName": "우주여행",
+   "action": "다음턴에 원하는 위치로 이동"
+ },
+ {
+   "LandNo": "36",
+   "LandName": "황금열쇠",
+   "action": "황금열쇠 뽑기"
+ },
+ {
+   "LandNo": "39",
+   "LandName": "사회복지기금 기부",
+   "action": "사회복지기금 15만원 기부"
+ }
+]
