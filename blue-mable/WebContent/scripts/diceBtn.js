@@ -7,8 +7,8 @@
 		dice1 = Math.floor(Math.random()*6+1);
 		dice2 = Math.floor(Math.random()*6+1);
 		
-		$("#dice1").attr("src","/blue-mable/image/dice"+dice1+".PNG");
-		$("#dice2").attr("src","/blue-mable/image/dice"+dice2+".PNG");
+		$("#dice1").attr("src","/blue-marble/image/dice"+dice1+".PNG");
+		$("#dice2").attr("src","/blue-marble/image/dice"+dice2+".PNG");
 		
 		//console.log("1: " + dice1);
 		//console.log("2: " + dice2);

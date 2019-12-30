@@ -1,5 +1,5 @@
 $.ajax({
-	url:"/blue-mable/Point",
+	url:"/blue-marble/Point",
 	method:"POST",
 	success:function(json) {
 		//console.log(json)
